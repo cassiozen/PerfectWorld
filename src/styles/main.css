@@ -1,0 +1,37 @@
+:root {
+  --sl-color-bg: #080808;
+  --purple-hsl: 255, 60%, 60%;
+  --overlay-blurple: hsla(var(--purple-hsl), 0.2);
+}
+
+h1 {
+  font-family: "Sogtric";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1em;
+}
+body {
+  font-family: "Goldman Sans";
+  background: linear-gradient(215deg, var(--overlay-blurple), transparent 10%),
+    radial-gradient(var(--overlay-blurple), transparent 40%) no-repeat -60vw -40vh / 105vw 200vh,
+    radial-gradient(var(--overlay-blurple), transparent 65%) no-repeat 50% calc(100% + 20rem) / 60rem 30rem;
+}
+.hero {
+  padding-block: 0;
+}
+.site-title {
+  font-family: "Sogtric";
+  color: #df934e;
+  background: inherit;
+}
+.title {
+  font-family: "Sogtric";
+  font-weight: normal;
+  font-style: normal;
+}
+.tagline {
+  line-height: 1.4em;
+}
+site-search {
+  display: none;
+}

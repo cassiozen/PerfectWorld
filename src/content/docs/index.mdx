@@ -1,0 +1,32 @@
+---
+title: Home
+description: Get started building your docs site with Starlight.
+template: splash
+hero:
+  title: Perfect World
+  tagline: |+
+    We made the world a better place, <br />
+    but now it’s crumbling under our feet.
+  image:
+    dark: ../../assets/hero.png
+    light: ../../assets/hero-light.png
+  actions:
+    - text: Get the playtest PDF
+      link: /PerfectWorld.pdf
+      icon: external
+      variant: primary
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<CardGrid stagger>
+  <Card title="About">
+    Perfect World is a cyberpunk role-playing game for one facilitator and at least one other player. 
+    Players act as neuromancers, hackers who can manipulate connected devices around them in ways that defy comprehension. If "Any sufficiently advanced technology is indistinguishable from magic", neuromancers are the wizards of this age, the wildcards in a deck rigged by AIs and corporations driving the world to the precipice of chaos.
+  </Card>
+  <Card>
+    Based on the Cairn rule system by [Yochai Gal](https://newschoolrevolution.com), with additional material from Monolith by Adam Hensley. 
+		<br />The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+		<br />This is a game that values community contributions! I'm working on the submission guide, in the meantime reach me at @cassiozen@hackiderm.io (Mastodon).
+  </Card>
+</CardGrid>
