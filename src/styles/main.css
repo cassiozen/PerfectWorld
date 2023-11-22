@@ -19,6 +19,11 @@ body {
 .hero {
   padding-block: 0;
 }
+.hero img {
+  width: min(120%, 27rem);
+  height: auto;
+  padding-inline-end: 1.5rem;
+}
 .site-title {
   font-family: "Sogtric";
   color: #df934e;
@@ -31,6 +36,11 @@ body {
 }
 .tagline {
   line-height: 1.4em;
+}
+
+.bookpages {
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 site-search {
   display: none;

@@ -8,8 +8,7 @@ hero:
     We made the world a better place, <br />
     but now it’s crumbling under our feet.
   image:
-    dark: ../../assets/hero.png
-    light: ../../assets/hero-light.png
+    html: <img src="/cover.png" alt="Perfect World book cover" with="439" height="588" />
   actions:
     - text: Download the PDF
       link: /PerfectWorld.pdf
@@ -23,12 +22,18 @@ import Analytics from '../../components/Analytics.astro';
 <Analytics />
 <CardGrid stagger>
   <Card title="About">
-    Perfect World is a cyberpunk role-playing game for one facilitator and at least one other player. 
+    Perfect World is a cyberpunk role-playing game for one facilitator and at least one other player.<br />
     Players act as neuromancers, hackers who can manipulate connected devices around them in ways that defy comprehension. If "Any sufficiently advanced technology is indistinguishable from magic", neuromancers are the wizards of this age, the wildcards in a deck rigged by AIs and corporations driving the world to the precipice of chaos.
   </Card>
   <Card>
-    Based on the Cairn rule system by [Yochai Gal](https://newschoolrevolution.com), with additional material from Monolith by Adam Hensley. 
-		<br />The full text is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-		<br />This is a game that values community contributions! I'm working on the submission guide, in the meantime reach me at @cassiozen@hackiderm.io (Mastodon).
+     <img src="/pages_small.png" alt="Sample book pages" class="bookpages" /> 
   </Card>
+  <Card title="Contribute">
+    Perfect World is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), meaning you will always be able to copy, remix, transform, and build upon the material for any purpose, even commercially.
+    <br />This is a game that values community contributions! I'm working on the submission guide, in the meantime reach me at `@cassiozen@hackiderm.io` (Mastodon).
+    <br />Based on the Cairn rule system by [Yochai Gal](https://newschoolrevolution.com), with additional material from Monolith by Adam Hensley. 
+		
+		
+  </Card>
+  
 </CardGrid>
