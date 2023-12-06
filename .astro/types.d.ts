@@ -185,6 +185,48 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
+"SRD/dm_guide.md": {
+	id: "SRD/dm_guide.md";
+  slug: "srd/dm_guide";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"SRD/index.md": {
+	id: "SRD/index.md";
+  slug: "srd";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"SRD/players_guide.md": {
+	id: "SRD/players_guide.md";
+  slug: "srd/players_guide";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"SRD/rules.md": {
+	id: "SRD/rules.md";
+  slug: "srd/rules";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"SRD/setting.md": {
+	id: "SRD/setting.md";
+  slug: "srd/setting";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".md"] };
+"index.mdx": {
+	id: "index.mdx";
+  slug: "index";
+  body: string;
+  collection: "docs";
+  data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
 };
 
 	};
