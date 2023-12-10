@@ -24,6 +24,15 @@ body {
   height: auto;
   padding-inline-end: 1.5rem;
 }
+
+.hero .action.primary {
+  background: #fcc607;
+  border-radius: 5px;
+}
+
+.hero .action.primary:hover {
+  animation: wiggle 0.2s 2;
+}
 .site-title {
   font-family: "Sogtric";
   color: #df934e;
@@ -105,6 +114,42 @@ main:before {
   display: block;
   animation: glitchTop 2.5s linear infinite;
   clip-path: polygon(0 20%, 100% 20%, 100% 70%, 0 70%);
+}
+
+@keyframes wiggle {
+  0% {
+    transform: skewX(24deg);
+  }
+  10% {
+    transform: skewX(-8deg);
+  }
+  20% {
+    transform: skewX(55deg);
+  }
+  30% {
+    transform: skewX(-90deg);
+  }
+  40% {
+    transform: skewX(29deg);
+  }
+  50% {
+    transform: skewX(-90deg);
+  }
+  60% {
+    transform: skewX(3deg);
+  }
+  70% {
+    transform: skewX(-2deg);
+  }
+  80% {
+    transform: skewX(1deg);
+  }
+  90% {
+    transform: skewX(10deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
 }
 
 @keyframes glitch {
