@@ -41,6 +41,108 @@ body {
   margin-top: -20px;
   margin-bottom: -20px;
 }
+
+main:before {
+  display: block;
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+.hero h1 {
+  animation: glitch 3s linear infinite;
+}
+.hero h1:before {
+  max-width: 500px;
+  content: "Perfect World";
+  position: absolute;
+  display: block;
+  animation: glitchTop 2.5s linear infinite;
+  clip-path: polygon(0 20%, 100% 20%, 100% 70%, 0 70%);
+}
+
+@keyframes glitch {
+  50%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  2%,
+  32% {
+    transform: translate(1px, 0) skew(0deg);
+  }
+  4%,
+  30% {
+    transform: translate(-1px, 0) skew(0deg);
+  }
+  31% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+@keyframes glitchTop {
+  50%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+  12%,
+  34% {
+    transform: translate(2px, 0px);
+  }
+  14%,
+  30% {
+    transform: translate(-2px, 0px);
+  }
+  31% {
+    transform: translate(1px, -1px) skew(-12deg);
+  }
+}
+
 @media (min-width: 800px) {
   .content {
     margin-top: -1.5rem;
