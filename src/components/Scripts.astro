@@ -1,0 +1,42 @@
+---
+
+---
+
+<script>
+  import { track } from "@vercel/analytics";
+  document.getElementsByClassName("primary")[0].addEventListener("click", () => {
+    track("playtestDownload");
+  });
+
+  function resizeGridItem(item: HTMLDivElement) {
+    const compStyles = window.getComputedStyle(item);
+    const padding = parseInt(compStyles.getPropertyValue("padding"));
+    const contentBox = item.querySelector(".body") as HTMLDivElement;
+    const grid = document.getElementsByClassName("card-grid")[0];
+    const rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));
+    const rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap"));
+    const rowSpan = Math.ceil(
+      (contentBox.getBoundingClientRect().height + padding + padding + 15 + rowGap) / (rowHeight + rowGap)
+    );
+    item.style.gridRowEnd = "span " + rowSpan;
+  }
+
+  function resizeAllGridItems() {
+    const allItems = document.getElementsByClassName("card");
+    for (let x = 0; x < allItems.length; x++) {
+      resizeGridItem(allItems[x] as HTMLDivElement);
+    }
+  }
+
+  // @ts-ignore
+  window.onload = resizeAllGridItems();
+
+  window.addEventListener("resize", resizeAllGridItems);
+
+  // const allItems = document.getElementsByClassName("card");
+
+  // function resizeInstance(instance) {
+  //   const item = instance.elements[0];
+  //   resizeGridItem(item);
+  // }
+</script>

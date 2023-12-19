@@ -20,14 +20,41 @@ body {
   padding-block: 0;
 }
 .hero img {
-  width: min(120%, 27rem);
+  /* width: min(135%, 33rem);
   height: auto;
-  padding-inline-end: 1.5rem;
+  padding-inline-end: 1.5rem; */
+}
+
+.hero-html {
+  width: min(70%, 30rem) !important;
+}
+
+@media (min-width: 50rem) {
+  .hero-html {
+    width: min(115%, 30rem) !important;
+  }
+}
+
+.hero-img {
+  width: 100%;
+  aspect-ratio: 1 / 1.3394077449;
+  background-image: url("/cover.png");
+  background-size: cover;
+  margin-right: calc(1rem - 3px);
+}
+
+.hero .action {
+  padding: 1rem 1.25rem;
 }
 
 .hero .action.primary {
   background: #fcc607;
   border-radius: 5px;
+}
+
+.hero .action.minimal {
+  border-radius: 5px;
+  border: 1px solid var(--sl-color-gray-5);
 }
 
 .site-title {
@@ -44,8 +71,65 @@ body {
   line-height: 1.4em;
 }
 .bookpages {
-  margin-top: -20px;
-  margin-bottom: -20px;
+  margin-top: -10%;
+}
+
+.card-grid {
+  grid-auto-rows: 35px;
+}
+
+@media (max-width: 50rem) {
+  .stagger {
+    display: none;
+  }
+}
+
+.card img {
+  max-width: 108%;
+  margin-left: -4%;
+}
+
+.card .title::after {
+  content: "\00a0 ";
+}
+
+.input-field {
+  width: calc(100% - 65px);
+}
+.form-errors {
+  min-height: 25px;
+  color: #cc7075;
+}
+#submit {
+  position: relative;
+}
+#submit:disabled {
+  color: transparent;
+}
+#submit:disabled::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 main:before {

@@ -1,0 +1,46 @@
+---
+
+---
+
+<script>
+  const subsDiv = document.getElementById("subscribe") as HTMLDivElement;
+  const subsForm = document.getElementById("subs");
+  const subsBtn = document.getElementById("submit") as HTMLButtonElement;
+  const subsErrorMsg = document.getElementsByClassName("form-errors")[0] as HTMLParagraphElement;
+  subsForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData((event?.target as HTMLFormElement) ?? undefined);
+    subsErrorMsg.innerText = "";
+    subsBtn.disabled = true;
+    fetch("/api/subscriptions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+      },
+      body: `email=${formData.get("email")}`,
+    })
+      .then((resp) => {
+        if (resp.ok) {
+          subsDiv.innerHTML = "<p>Thanks</p>";
+        }
+        return resp.json();
+      })
+      .then((data) => {
+        try {
+          if (data.message) {
+            subsErrorMsg.innerText = data.message;
+            subsBtn.disabled = false;
+          }
+        } catch (error) {}
+      })
+      .catch((e) => {});
+  });
+</script>
+<div id="subscribe">
+  No spam, infrequent emails only when there's something new and exciting to share.
+  <form action="/api/subscriptions" id="subs">
+    <p class="form-errors"></p>
+    <input type="email" name="email" class="input-field" size="30" required />
+    <button type="submit" id="submit">I'm in</button>
+  </form>
+</div>

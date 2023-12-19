@@ -8,43 +8,65 @@ hero:
     We made the world a better place, <br />
     but now it’s crumbling under our feet.
   image:
-    html: <img src="/cover.png" alt="Perfect World book cover" with="439" height="588" />
+    html: <div class="hero-img"></div>
   actions:
     - text: Download the PDF
       link: /PerfectWorld.pdf
-      icon: external
+      icon: document
       variant: primary
+    - text: PDF Booklet (for printing)
+      link: /booklet.zip
+      icon: open-book
 sidebar:
   hidden: true
 ---
 
 import { Card, CardGrid } from "@astrojs/starlight/components";
-import Analytics from '../../components/Analytics.astro';
+import Scripts from "../../components/Scripts.astro";
+import Subscribe from "../../components/Subscribe.astro";
 
-<Analytics />
-<CardGrid stagger>
+<Scripts />
+<CardGrid>
   <Card title="About">
-The Perfect World setting tells a story of human ambition, its ascension and fall, and the struggle for power in a world where technology binds everything. It delves into how AI, once humanity’s greatest ally, became a tool of corporate subjugation.
-Players act as neuromancers, hackers who can manipulate connected devices around them in ways that defy comprehension. If “Any sufficiently advanced technology is indistinguishable from magic”, neuromancers are the wizards of this age, holding the potential to reclaim a society on the brink of collapse.
-Forge your narrative in a world balanced on the razor’s edge between utopian dreams and a dystopian reality.
+    The Perfect World setting tells a story of human ambition, its ascension and fall, and the struggle for power in a
+    world where technology binds everything. It delves into how AI, once humanity’s greatest ally, became a tool of
+    corporate subjugation. Players act as neuromancers, hackers who can manipulate connected devices around them in ways
+    that defy comprehension. If “Any sufficiently advanced technology is indistinguishable from magic”, neuromancers are
+    the wizards of this age, holding the potential to reclaim a society on the brink of collapse. Forge your narrative
+    in a world balanced on the razor’s edge between utopian dreams and a dystopian reality.
   </Card>
+  <div class="stagger"></div>
   <Card>
-     <img src="/pages_small.png" alt="Sample book pages" class="bookpages" /> 
+    <img src="/pages_small.png" alt="Sample book pages" class="bookpages" width="900" height="726" />
   </Card>
   <Card title="What Sets it Apart?">
-  <ul>
-  <li><strong>Unique hacking mechanics:</strong> Unlike many cyberpunk RPGs where hacking can feel like a separate mini-game, Perfect World integrates hacking into the main gameplay, ensuring everyone stays involved and active, regardless of their character’s focus.</li>
-  <li><strong>Surprising DM Role:</strong> The DM isn’t just a narrator or rule enforcer – they secretly play the role of Deus ex Machina, an advanced AI orchestrating resistance from within the game’s narrative. This dual role adds an unexpected layer to the game, allowing the DM to directly influence the narrative, creating a dynamic and unpredictable gaming experience.</li>
-  </ul>
+    <ul>
+      <li>
+        <strong>Unique hacking mechanics:</strong> Unlike many cyberpunk RPGs where hacking can feel like a separate
+        mini-game, Perfect World integrates hacking into the main gameplay, ensuring everyone stays involved and active,
+        regardless of their character’s focus.
+      </li>
+      <li>
+        <strong>Surprising DM Role:</strong> The DM isn’t just a narrator or rule enforcer – they secretly play the role
+        of Deus ex Machina, an advanced AI orchestrating resistance from within the game’s narrative. This dual role
+        adds an unexpected layer to the game, allowing the DM to directly influence the narrative, creating a dynamic
+        and unpredictable gaming experience.
+      </li>
+    </ul>
+  </Card>
+  <Card title="Newsletter">
+    <Subscribe />
   </Card>
   <Card title="Contribute">
-    Perfect World is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), meaning you will always be able to copy, remix, transform, and build upon the material for any purpose, even commercially.
-    <br /><a href="/srd">System Reference Document</a>
-    <br />This is a game that values community contributions! I'm working on the submission guide, in the meantime reach me at `@cassiozen@hackiderm.io` (Mastodon).
-    <br />Based on the Cairn rule system by [Yochai Gal](https://newschoolrevolution.com), with additional material from Monolith by Adam Hensley. 
-    
-		
-		
+    Perfect World is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), meaning you will
+    always be able to copy, remix, transform, and build upon the material for any purpose, even commercially.
+    <br />
+    <a href="/srd">System Reference Document</a>
+    <br />
+    This is a game that values community contributions! I'm working on the submission guide, in the meantime reach me at
+    `@cassiozen@hackiderm.io` (Mastodon).
+    <br />
+    Based on the Cairn rule system by [Yochai Gal](https://newschoolrevolution.com), with additional material from
+    Monolith by Adam Hensley.
   </Card>
-  
 </CardGrid>
