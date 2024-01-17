@@ -1,8 +1,18 @@
 {
   "name": "perfect-world-api",
+  "module": "index.ts",
   "type": "module",
   "version": "0.0.1",
-  "private": true,
-  "scripts": {},
+  "scripts": {
+    "start": "bun index.ts",
+    "dev": "bun --watch run index.ts"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@tsconfig/bun": "^1.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
   "dependencies": {}
 }
