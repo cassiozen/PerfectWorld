@@ -3,9 +3,12 @@
 ---
 
 <script>
-  import { track } from "@vercel/analytics";
   document.getElementsByClassName("primary")[0].addEventListener("click", () => {
-    track("playtestDownload");
+    // @ts-ignore
+    window.goatcounter.count({
+      path: "download",
+      event: true,
+    });
   });
 
   function resizeGridItem(item: HTMLDivElement) {
