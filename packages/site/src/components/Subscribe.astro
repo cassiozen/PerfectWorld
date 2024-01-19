@@ -12,7 +12,7 @@
     const formData = new FormData((event?.target as HTMLFormElement) ?? undefined);
     subsErrorMsg.innerText = "";
     subsBtn.disabled = true;
-    fetch("/api/subscriptions", {
+    fetch("/api/", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
