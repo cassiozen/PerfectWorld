@@ -11,6 +11,14 @@
     });
   });
 
+  document.getElementsByClassName("minimal")[0].addEventListener("click", () => {
+    // @ts-ignore
+    window.goatcounter.count({
+      path: "download",
+      event: true,
+    });
+  });
+
   function resizeGridItem(item: HTMLDivElement) {
     const compStyles = window.getComputedStyle(item);
     const padding = parseInt(compStyles.getPropertyValue("padding"));
